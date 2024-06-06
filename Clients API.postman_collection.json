@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "e60bf645-dc1c-439a-a98c-d1f249878438",
+		"name": "Clients API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11703745"
+	},
+	"item": [
+		{
+			"name": "Create Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf\": \"12345678062\",\r\n    \"name\": \"Jhon Doe\",\r\n    \"email\": \"john.doe@example.com\",\r\n    \"maritalStatus\": \"Single\",\r\n    \"address\": {\r\n        \"number\": \"123\",\r\n        \"street\": \"Main Street\",\r\n        \"city\": \"New York\",\r\n        \"zip_code\": \"10001\",\r\n        \"district\": \"Manhattan\"\r\n    },\r\n    \"phoneNumbers\": [\"1234567890\", \"1234567891\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Clients",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Find Client by CPF",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateClient",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jhon Doe Updated again\",\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/clients/:cpf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clients",
+						":cpf"
+					],
+					"variable": [
+						{
+							"key": "cpf",
+							"value": "12345678061"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
